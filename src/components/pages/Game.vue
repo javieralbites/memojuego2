@@ -158,9 +158,9 @@ export default {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.results {
-  width: 800px;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .results {
+//   width: 800px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 </style>
