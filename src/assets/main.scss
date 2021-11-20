@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: rgb(19, 105, 26)
+}
+
+.container {
+    width: 750px;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+
+    // background-color: hotpink;
+    // border: black 1px solid;
+    @media (max-width:760px) {
+        width: 90%;
+        margin-top: 1em;
+
+    }
+}

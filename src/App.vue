@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <component :is="actualPage" @changePage="changePage"></component>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Menu from "./components/pages/Menu.vue";
+import Score from "./components/pages/Score.vue";
+import Credits from "./components/pages/Credits.vue";
+import Game from "./components/pages/Game.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Menu,
+    Score,
+    Credits,
+    Game,
+  },
+  data() {
+    return {
+      actualPage: "Menu",
+    };
+  },
+  methods: {
+    changePage(newPage) {
+      this.actualPage = newPage;
+    },
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
