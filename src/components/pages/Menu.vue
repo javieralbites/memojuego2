@@ -10,26 +10,19 @@
 
 <script>
 export default {
-  
   methods: {
-    name: 'Menu',
-    changePage(newPage){
-      // this.$store.commit('changePage', newPage)
-      this.$emit('changePage', newPage)
-    }
+    name: "Menu",
+    changePage(newPage) {
+      this.$emit("changePage", newPage);
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .menu {
-  // width: 440px;
-  // margin-right: auto;
-  // margin-left: auto;
   text-align: center;
-//   background: brown;
   h1 {
-    // margin-top: 1em;
     font-size: 5em;
     font-weight: bolder;
     color: #fff;
@@ -42,30 +35,25 @@ export default {
     margin-bottom: 1em;
   }
   .btnmenu {
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-    margin-bottom: 1em;
-    background-color: #fff;
-    // display: block;
-    border: 0;
-    outline: 0;
-    padding: 1.5rem 2rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.8em;
+    background-color: rgb(241, 239, 239);
+    padding: 1.2rem;
     font-size: 3rem;
     font-family: monospace;
     box-shadow: 0px 5px 10px #48494b;
     transition: all 0.3s;
     cursor: pointer;
     border-radius: 5px;
-    // border-bottom: 4px solid #d9d9d9;
-    @media (max-width:480px) {
+    @media (max-width: 760px) {
       width: 90%;
-    margin-bottom: .5em;
-
+      margin-bottom: 0.5em;
     }
     &:hover {
       box-shadow: 0px 15px 25px -5px #48494bee;
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
     &:active {
       box-shadow: 0px 4px 8px #48494bee;
