@@ -52,6 +52,7 @@ h5{
     margin-top: 3em;
     color: rgb(248, 248, 245);
     text-shadow: 0px 5px 5px grey;
+    cursor: pointer;
 }
 a{
     display: block;

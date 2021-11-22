@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .card {
+  user-select: none;
   position: relative;
   width: 130px;
   height: 130px;
@@ -46,6 +47,7 @@ export default {
   backface-visibility: hidden;
   transition: 0.5s;
   border: rgb(10, 9, 9) 2px solid;
+  // user-select: none;
 }
 .card img:nth-child(2) {
   transform: rotateY(180deg);
@@ -54,7 +56,7 @@ export default {
   transform: rotateY(0deg);
 }
 .card.isFliped.isMatched img:nth-child(2) {
-  border: rgb(23, 163, 46) 2px solid;
+  // border: rgb(23, 163, 46) 2px solid;
   opacity: 0.4;
 }
 .card.isFliped img:nth-child(1) {

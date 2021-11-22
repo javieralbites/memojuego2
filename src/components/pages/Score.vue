@@ -104,9 +104,6 @@ tr:nth-child(even) {
   gap: 1em;
   .button {
     text-align: center;
-    // margin-left: auto;
-    // margin-right: auto;
-    // margin-bottom: 0.8em;
     background-color: rgb(241, 239, 239);
     padding: 1.2rem 2em;
     font-size: 1.5rem;
