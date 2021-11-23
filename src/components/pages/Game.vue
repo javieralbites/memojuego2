@@ -19,26 +19,28 @@
       >
       </cards>
     </div>
-    <div v-show="finishGame" class="results">
-      <h1>You Win!!!</h1>
-      <h2>Turns: {{ turns }}</h2>
-      <h2>Time: {{ time }}</h2>
-      <h3>Introduce Your Name:</h3>
-      <input
-        @keyup.enter="saveScore"
-        type="text"
-        maxlength="10"
-        v-model="playername"
-      />
-      <button
-        class="saveScore"
-        @click="saveScore"
-        :disabled="!playername.length"
-      >
-        Save Score
-      </button>
-      <div class="retry" @click="restart">Retry</div>
-    </div>
+    <transition name="zoom">
+      <div v-show="finishGame" class="results">
+        <h1>You Win!!!</h1>
+        <h2>Turns: {{ turns }}</h2>
+        <h2>Time: {{ time }}</h2>
+        <h3>Introduce Your Name:</h3>
+        <input
+          @keyup.enter="saveScore"
+          type="text"
+          maxlength="10"
+          v-model="playername"
+        />
+        <button
+          class="saveScore"
+          @click="saveScore"
+          :disabled="!playername.length"
+        >
+          Save Score
+        </button>
+        <div class="retry" @click="restart">Retry</div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -264,6 +266,7 @@ export default {
     text-align: center;
   }
   input {
+    text-align: center;
     width: 100%;
     padding: 12px 20px;
     border: 1px solid #ccc;
@@ -304,5 +307,19 @@ export default {
     text-align: center;
     margin-top: 1em;
   }
+}
+.zoom-enter-from,
+.fade-leave-to {
+  transform: scale(0);
+}
+.zoom-enter-to,
+.zoom-leave-from {
+  transform: scale(1);
+}
+.zoom-enter-active {
+  transition: all 1s ease;
+}
+.zoom-leave-active {
+  transition: all 0.2s ease;
 }
 </style>
